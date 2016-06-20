@@ -5,10 +5,10 @@ keywords = Game, Decision Making, Psychology
 lifetime = 24
 us_only = true
 approve_requirement = 95
-contact_email_on_error = gureckislab@gmail.com
+contact_email_on_error = ADD_EMAIL_HERE@gmail.com
 ad_group = Mushroom Experiments
 psiturk_keywords = decision making, learning, information
-organization_name = New York University
+organization_name = INSERT UNIVERSITY NAME
 browser_exclude_rule = MSIE, mobile, tablet
 
 [Database Parameters]
