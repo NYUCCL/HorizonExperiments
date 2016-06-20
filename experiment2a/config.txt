@@ -1,0 +1,34 @@
+[HIT Configuration]
+title = Mushroom Decision Making Game [Bonus up to $1.75!]
+description = Decision-making game with mushroom species for cognitive science study. Takes 20-30 minutes with an expected bonus of $0.50 to $1.75.
+keywords = Game, Decision Making, Psychology
+max_assignments = 1
+lifetime = 24
+reward = 1.00
+duration = 1
+us_only = true
+approve_requirement = 95
+using_sandbox = False
+
+[Database Parameters]
+database_url = sqlite:///participants.db
+table_name = approachavoid
+
+[Server Parameters]
+host = 0.0.0.0
+port = 5001
+cutoff_time = 30
+logfile = server.log
+loglevel = 1
+debug = false
+login_username = examplename
+login_pw = examplepassword
+threads = auto
+
+[Task Parameters]
+experiment_code_version = 1.1
+num_conds = 1
+num_counters = 1
+support_ie = false
+code_version = 1.0
+

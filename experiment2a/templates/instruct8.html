@@ -1,0 +1,93 @@
+
+<script type="text/javascript">
+var svg1 = d3.select("#svg1");
+var svg2 = d3.select("#svg2");
+instrColors = ["magenta", "cyan"];
+for(var i=0;i<instrColors.length;i++){
+    var cloneFrom = $("#mushroom");
+    var clone = cloneFrom.clone().attr("id", instrColors[i]).insertAfter(cloneFrom);
+    clone.find(".bulb").css("fill", instrColors[i]);
+}
+svg1.append("use").attr("xlink:href", "#magenta")
+    .attr("transform", "translate(400)");
+var group = svg2.append("g")
+		.attr("transform", "translate(400)");
+
+group.append("use").attr("xlink:href", "#magenta")
+    .attr("transform", "translate(0,40), scale(0.4,0.4)")
+group.append("circle")
+    .style("fill", "gray")
+    .attr("cx", 11)
+    .attr("cy", 30)
+    .attr("r", 6);
+group.append("circle")
+    .style("fill", "red")
+    .attr("cx", 25)
+    .attr("cy", 30)
+    .attr("r", 6);
+group.append("circle")
+    .style("fill", "lime")
+    .attr("cx", 39)
+    .attr("cy", 30)
+    .attr("r", 6);
+
+</script>
+<h1>Instructions</h1>
+<p>Your work will be a great step forward for science! Unfortunately, you have been out longer than expected and have run out of food. To keep your strength up as you hike back to camp, you'll have to eat some of the mushrooms you come across. You know that <strong>both species are sometimes healthy and sometimes poisonous</strong>, but you don't know how often mushroom in each species are healthy, and how often they are poisonous.
+  
+<p>As you hike to camp, you will see mushrooms one at a time in the center of the screen, like this:</p>
+<svg id="svg1" height = "150"></svg>
+<p>When you see a mushroom, press the <strong>UP</strong> arrow to eat the mushroom or the <strong>DOWN</strong> arrow to avoid the mushroom. In the upper left corner of the screen, you will see your current <strong>ENERGY</strong>. Your energy goes up by <span style="color: lime">+5</span> point when you eat a healthy mushroom and down by <span style="color: red">-5</span> points when you eat an unhealthy mushroom. When you avoid a mushroom your energy won't change, and you won't find out whether it was poisonous or not.
+<p>Your avatar shows your energy visually. As you gain or lose energy, its expression will change:</p>
+<svg height="150">
+
+<g transform="translate(180, -80), scale(0.8,0.8)"><circle cx="200" cy="200" r="80" style="fill: #ff0000;"></circle><ellipse cx="175" cy="170" ry="10" rx="8"></ellipse><ellipse cx="225" cy="170" ry="10" rx="8"></ellipse><path d="M160,231c2.4492127076447545e-15,-40,79.99999999999999,-40,80,0" style="fill-opacity: 0; stroke-opacity: 1; stroke: #000000; stroke-width: 4px;"></path></g>
+
+<g transform="translate(340, -80), scale(0.8,0.8)"><circle cx="200" cy="200" r="80" style="fill: #efff00;"></circle><ellipse cx="175" cy="170" ry="10" rx="8"></ellipse><ellipse cx="225" cy="170" ry="10" rx="8"></ellipse><path d="M160,215c39.94866028684211,2.0259667535485066,40.05133971315789,2.025966753548504,80,0" style="fill-opacity: 0; stroke-opacity: 1; stroke: #000000; stroke-width: 4px;"></path></g>
+
+<g transform="translate(500, -80), scale(0.8,0.8)"><circle cx="200" cy="200" r="80" style="fill: #0fff00;"></circle><ellipse cx="175" cy="170" ry="10" rx="8"></ellipse><ellipse cx="225" cy="170" ry="10" rx="8"></ellipse><path d="M160,201c4.046732879497289,39.79477293567581,75.95326712050272,39.79477293567581,80,0" style="fill-opacity: 0; stroke-opacity: 1; stroke: #000000; stroke-width: 4px;"></path></g>
+
+</svg>
+
+<p>Whenever you eat or avoid a mushroom, an observation circle will be added to the species. If you avoid a mushroom a <span style="color: gray">gray</span> circle like the ones you saw earlier will appear. If you eat a healthy mushroom a <span style="color: lime">green</span> circle will appear, and if you eat a poisonous mushroom a <span style="color: red">red</span> circle will appear. For example, mushrooms from this species have been avoided once, poisonous once, and healthy once:</p>
+<svg version="1.1" height="160" id="svg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     xml:space="preserve">
+  <defs>
+    <g id="mushroom">
+      <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M141.75,68.449H71.574l0.43,7.875
+								      c-0.314,70.336-5.924,72.563,34.746,72.563s34.972-2.258,34.658-72.594L141.75,68.449z"/>
+      <g>
+	<g>
+	  <path class="bulb" id="XMLID_1_" fill="#000000" d="M16.245,79.353C0.25,80.949,0,57.699,0,57.699C-0.04,11.929,72.031,0,104.75,0
+							     s102,7.449,103,54.449c0.763,12.095-3.183,26.846-16.25,24.983c-6.342-0.905-66.669-4.483-86.75-4.483
+							     S22.619,78.717,16.245,79.353z"/>
+	</g>
+	<g>
+	  <defs>
+	    <path id="SVGID_1_" d="M16.245,79.353C0.25,80.949,0,57.699,0,57.699C-0.04,11.929,72.031,0,104.75,0s102,7.449,103,54.449
+				   c0.763,12.095-3.183,26.846-16.25,24.983c-6.342-0.905-66.669-4.483-86.75-4.483S22.619,78.717,16.245,79.353z"/>
+	  </defs>
+	  <clipPath id="SVGID_2_">
+	    <use xlink:href="#SVGID_1_"  overflow="visible"/>
+	  </clipPath>
+	  
+	  <ellipse clip-path="url(#SVGID_2_)" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="50.771" cy="10.074" rx="14.979" ry="15.125"/>
+	</g>
+	<g>
+	  <path id="XMLID_2_" fill="none" stroke="#000000" stroke-miterlimit="10" d="M16.245,79.353C0.25,80.949,0,57.699,0,57.699
+										     C-0.04,11.929,72.031,0,104.75,0s102,7.449,103,54.449c0.763,12.095-3.183,26.846-16.25,24.983
+										     c-6.342-0.905-66.669-4.483-86.75-4.483S22.619,78.717,16.245,79.353z"/>
+	</g>
+      </g>
+      <circle fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="182.75" cy="59.699" r="14.5"/>
+      <ellipse fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="80.293" cy="60.366" rx="8.957" ry="7.583"/>
+      <ellipse fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="143.875" cy="25.574" rx="10.125" ry="12.375"/>
+    </g>
+    <defs/>
+</svg>
+<p>The observation circles are sorted by type, with gray circles first, then red, then green.
+<div class="prompt">When you're ready to continue, press <strong>Next</strong>.</div>
+
+<input type="button" class="continue" id="Next" value="Next">
+
+

@@ -1,0 +1,93 @@
+<!--WRAPPER-->
+<div id="wrapper">
+
+    <!--LOGIN FORM-->
+    <div name="login-form" class="login-form">
+        <!--HEADER-->
+        <div class="header">
+        <!--TITLE--><h1>Comprehension Check</h1><!--END TITLE-->
+        <!--DESCRIPTION--><span></span><!-- END DESCRIPTION-->
+        </div>
+        <!--END HEADER-->
+
+        <div class="questionnaire">
+          <p id="toptext">
+            Before beginning the experiment, you must answer a few simple questions to ensure you have read the instructions. If you do not answer all questions correctly, you will be returned to the start of the instructions and have a chance to retake this quiz.
+          <form id="prequiz" action="debrief" method="post">
+            <div class="question">
+              <p class="questiontext">
+            		Select the correct statement from this list:
+              <select id="healthyPoisonous" name="healthyPoisonous">
+                <option value="noresp" SELECTED></option>
+		<option value="always">Each species is either always healthy or always poisonous.</option>
+		<option value="healthy">All species are always healthy.</option>
+		<option value="poisonous">All species are always poisonous.</option>
+		<option value="sometimes">Species may be sometimes healthy and sometimes poisonous.</option>
+              </select>
+              </p>
+            </div>
+            <div class="question">
+              <p class="questiontext">
+		          What color circle is used to record a poisonous mushroom?
+              <select id="poison" name="poison">
+                <option value="noresp" SELECTED></option>
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="gray">Gray</option>
+              </select>
+              </p>
+            </div>
+            <div class="question">
+              <p class="questiontext">
+          		What color circle is used to record a healthy mushroom?
+              <select id="health" name="health">
+                <option value="noresp" SELECTED></option>
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="gray">Gray</option>
+              </select>
+              </p>
+            </div>
+            <div class="question">
+              <p class="questiontext">
+          		What color circle is used to record an avoided mushroom?
+              <select id="avoid" name="avoid">
+                <option value="noresp" SELECTED></option>
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="gray">Gray</option>
+              </select>
+              </p>
+            </div>
+            <div class="question">
+              <p class="questiontext">
+          		What happens when you avoid a mushroom?
+              <select id="avoidInfo" name="avoidInfo">
+                <option value="noresp" SELECTED></option>
+		<option value="noInfo">You do not learn if it was healthy or poisonous, and do not gain or lose winnings.</option>
+		<option value="healthInfo">You learn if it was healthy or poisonous, but do not gain or lose winnings.</option>
+		<option value="allInfo">You learn if it was healthy or poisonous and gain or lose winnings.</option>
+              </select>
+              </p>
+	          </div>
+            <div class="question">
+              <p class="questiontext">
+          		What do you know about how many mushrooms are in each patch?
+              <select id="frequency" name="frequency">
+                <option value="noresp" SELECTED></option>
+		<option value="equal">All patches have the same number of mushrooms.</option>
+		<option value="unequal">Some patches have more mushrooms than others.</option>
+              </select>
+              </p>
+            </div>
+          </form>
+          </p>
+
+        </div>
+        <!--END CONTENT-->
+        <!-- BUTTONS-->
+
+        <button type="button" id="continue" class="btn btn-warning btn-lg continue"> Continue </button>
+    </div> <!--END LOGIN FORM-->
+</div>
+<!-- END WRAPPER -->

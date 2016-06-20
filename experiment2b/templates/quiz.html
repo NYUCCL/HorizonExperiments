@@ -1,0 +1,95 @@
+<!--WRAPPER-->
+<div id="wrapper">
+
+    <!--LOGIN FORM-->
+    <div name="login-form" class="login-form">
+        <!--HEADER-->
+        <div class="header">
+            <!--TITLE--><h1>Comprehension Check</h1><!--END TITLE-->
+            <!--DESCRIPTION--><span></span><!-- END DESCRIPTION-->
+        </div>
+        <!--END HEADER-->
+
+        <div class="questionnaire">
+            <p id="toptext">
+                Before beginning the experiment, you must answer a few simple questions to ensure you have read the instructions. If you do not answer all questions correctly, you will be returned to the start of the instructions and have a chance to retake this quiz.
+                <form id="prequiz" action="debrief" method="post">
+                    <div class="question">
+                        <p class="questiontext">
+            		            Select the correct statement from this list:
+                            <select id="healthyPoisonous" name="healthyPoisonous">
+                                <option value="noresp" SELECTED></option>
+		                            <option value="always">Each species is either always healthy or always poisonous.</option>
+		                            <option value="healthy">All species are always healthy.</option>
+		                            <option value="poisonous">All species are always poisonous.</option>
+		                            <option value="sometimes">Species can be 2/3 healthy or 2/3 poisonous.</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p class="questiontext">
+		                        What color is used to record a poisonous mushroom?
+                            <select id="poison" name="poison">
+                                <option value="noresp" SELECTED></option>
+		                            <option value="red">Red</option>
+		                            <option value="green">Green</option>
+		                            <option value="gray">Gray</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p class="questiontext">
+          		              What color is used to record a healthy mushroom?
+                            <select id="health" name="health">
+                                <option value="noresp" SELECTED></option>
+		                            <option value="red">Red</option>
+		                            <option value="green">Green</option>
+		                            <option value="gray">Gray</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="question">
+                        <p class="questiontext">
+          		              Are there more mostly-healthy species, or more mostly-poisonous species?
+                            <select id="typeProp" name="typeProp">
+                                <option value="noresp" SELECTED></option>
+		                            <option value="moreHealthy">There are more mostly-healthy species</option>
+		                            <option value="morePoisonous">There are more mostly-poisonous species</option>
+		                            <option value="equal">The two species types are equally common.</option>
+                            </select>
+                        </p>
+	                  </div>
+                    <div class="question">
+                        <p class="questiontext">
+          		              What happens when you avoid a mushroom?
+                            <select id="avoidInfo" name="avoidInfo">
+                                <option value="noresp" SELECTED></option>
+		                            <option value="noInfo">You do not learn if it was healthy or poisonous, and do not gain or lose winnings.</option>
+		                            <option value="healthInfo">You learn if it was healthy or poisonous, but do not gain or lose winnings.</option>
+		                            <option value="allInfo">You learn if it was healthy or poisonous and gain or lose winnings.</option>
+                            </select>
+                        </p>
+	                  </div>
+                    <div class="question">
+                        <p class="questiontext">
+          		              How long will you stay in each of the four environments?
+                            <select id="habitatlength" name="habitatlength">
+                                <option value="noresp" SELECTED></option>
+		                            <option value="twenty">Twenty mushrooms.</option>
+		                            <option value="hundred">One hundred mushrooms.</option>
+		                            <option value="variable">There is a small chance of leaving the environment after each mushroom.</option>
+                            </select>
+                        </p>
+                    </div>
+                </form>
+            </p>
+
+        </div>
+        <!--END CONTENT-->
+        <!-- BUTTONS-->
+        <button type="button" id="continue" class="btn btn-warning btn-lg continue"> Continue </button>
+
+    </div> <!--END LOGIN FORM-->
+</div>
+<!-- END WRAPPER -->
+

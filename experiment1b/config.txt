@@ -1,0 +1,35 @@
+[HIT Configuration]
+title = Mushroom Decision Making Game [Bonus up to $1.00!]
+description = Decision-making game with mushroom species for cognitive science study. Takes 10 minutes with an expected bonus up to $1.00.
+amt_keywords = Game, Decision Making, Psychology
+lifetime = 24
+us_only = true
+approve_requirement = 95
+contact_email_on_error = gureckislab@gmail.com
+ad_group = Mushroom Experiments
+psiturk_keywords = decision making, learning, information
+organization_name = New York University
+browser_exclude_rule = MSIE, mobile, tablet
+
+[Database Parameters]
+database_url = sqlite:///participants.db
+table_name = approachavoid
+
+[Server Parameters]
+host = 0.0.0.0
+port = 5001
+cutoff_time = 30
+logfile = server.log
+loglevel = 1
+debug = false
+login_username = examplename
+login_pw = examplepassword
+threads = auto
+
+[Task Parameters]
+experiment_code_version = 3.2
+num_conds = 2
+num_counters = 1
+
+[Shell Parameters]
+always_launch_in_sandbox = true
